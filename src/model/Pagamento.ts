@@ -1,34 +1,70 @@
 export default class Pagamento {
-    private tipoPagamento!: "dinheiro" | "cartao" | "pix";
+    private tipoPagamento!: number;
 
-    public constructor(tipoPagamento: "dinheiro" | "cartao" | "pix") {
+    public constructor(tipoPagamento: number) {
         this.tipoPagamento = tipoPagamento;
     }
 
-    public getTipo(): "dinheiro" | "cartao" | "pix" {
+    public getTipo(): number {
         return this.tipoPagamento;
     }
 
-    public setTipo(idTipo: "dinheiro" | "cartao" | "pix"): void {
+    public setTipo(idTipo: number): void {
         this.tipoPagamento = idTipo;
     }
 
-    public qualTipo(idTipo: "dinheiro" | "cartao" | "pix") {
-        idTipo: this.tipoPagamento;
+    public confereTipo(idTipo: number): number {
+        let tipo: number = idTipo;
 
-        switch(idTipo) {
-            case "dinheiro": this.tipoPagamento = idTipo;
-            break;
-
-            case "cartao": this.tipoPagamento = idTipo;
-            break;
-
-            case "pix": this.tipoPagamento = idTipo;
-            break;
-
-            default: return; //tratamento de erro aqui?
+        if (tipo == 1 || 2 || 3) {
+            return tipo;
         }
+        else {
+            throw new Error("Forma de pagamento inválida");
+        } 
     }
 
-    
+    public qualTipo(idTipo: number) {
+        //let confere: number = this.confereTipo(idTipo);
+
+        try {
+            this.confereTipo(idTipo);
+        } catch (error: any) {
+            console.error("Ocorreu um erro: " + error.message); 
+        } finally {
+            console.log("Deu certo");
+        }
+    }
 }
+
+// export default class Pagamento {
+//     private tipoPagamento!: "dinheiro" | "cartão" | "pix";
+
+//     public constructor(tipoPagamento: "dinheiro" | "cartão" | "pix") {
+//         this.tipoPagamento = tipoPagamento;
+//     }
+
+//     public getTipo(): "dinheiro" | "cartão" | "pix"{
+//         return this.tipoPagamento;
+//     }
+
+//     public setTipo("dinheiro" | "cartão" | "pix"): void {
+//         this.tipoPagamento = idTipo;
+//     }
+
+//     public qualTipo(idTipo: "dinheiro" | "cartão" | "pix") {
+//         idTipo: this.tipoPagamento;
+
+//         switch(idTipo) {
+//             case 1: this.tipoPagamento = idTipo;
+//             break;
+
+//             case 2: this.tipoPagamento = idTipo;
+//             break;
+
+//             case 3: this.tipoPagamento = idTipo;
+//             break;
+
+//             default: return; 
+//         }
+//     }

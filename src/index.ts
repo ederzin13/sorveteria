@@ -29,19 +29,21 @@ import PedidoCarrinho from "./model/PedidoCarrinho";
 // pedido.setQuant(10);
 // console.log(pedido);
 
-// let pagamento: Pagamento = new Pagamento("dinheiro");
-// console.log(pagamento);
+let pagamento: Pagamento = new Pagamento(1);
+console.log(pagamento);
+console.log(pagamento.confereTipo(1));
+console.log(pagamento.qualTipo(4));
 
-let carrinho1: Carrinho = new Carrinho();
-console.log(carrinho1.getQuantos());
+// let carrinho1: Carrinho = new Carrinho();
+// console.log(carrinho1.getQuantos());
 
-let carrinho2: Carrinho = new Carrinho();
-console.log(carrinho2.getQuantos());
+// let carrinho2: Carrinho = new Carrinho();
+// console.log(carrinho2.getQuantos());
 
-let carrinho3: Carrinho = new Carrinho();
-console.log(carrinho3.getQuantos());
+// let carrinho3: Carrinho = new Carrinho();
+// console.log(carrinho3.getQuantos());
 
-let carrinho4: Carrinho = new Carrinho();
-console.log(carrinho4.getQuantos());
+// let carrinho4: Carrinho = new Carrinho();
+// console.log(carrinho4.getQuantos());
 
 

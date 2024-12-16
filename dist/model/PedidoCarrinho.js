@@ -13,5 +13,15 @@ class PedidoCarrinho extends Pedido_1.default {
         let total = this.getSubTotal() + this.FRETE;
         return total;
     }
+    temDesconto() {
+        if (this.getQuant() >= 150 && this.temEntrega == true)
+            return true;
+        else
+            return false;
+    }
+    aplicaDesconto() {
+        let desconto = this.getQuant() * 0.3;
+        return desconto;
+    }
 }
 exports.default = PedidoCarrinho;
