@@ -1,0 +1,57 @@
+PEDIDOS DE CARRINHOS DE SORVETE
+
+Cliente (Super classe):
+- Nome;
+- Número de telefone;
+- Endereço?; C
+
+Pessoa:
+- CPF;
+
+Escola:
+- Nome / Razão social;
+- CNPJ;
+- Endereço; C
+
+Pedido:
+- Cliente; C
+- Quantidade de itens;
+- Forma de pagamento; C
+- Endereço; C
+- Data;
+- Subtotal;
+- Valor total;
+
+//Dá pra criar uma classe mãe de pedido com atributos gerais, e em seguida criar classes herdeiras para separar pedidos de escolas
+e pedidos comuns.
+
+PedidoCarrinho:
+- entrega;
+- FRETE;
+
+Picolés:
+- Sabor / descrição;
+- Valor unitário;
+
+Endereço:
+- Rua;
+- Bairro;
+- Número;
+- CEP;
+- Cidade??; //Interface? Pedidos para fora do perímetro urbano
+
+Formas de pagamento:
+- Pix;
+- Cartão;
+- Dinheiro;
+
+//Interface para taxa de serviço na hora do pagamento??
+
+Carrinho: 
+//- Quantidade de carrinhos disponíveis;
+//- Disponibilidade;
+- Capacidade;
+- Nome;
+- ClienteResp C;
+
+--Sobrecarga e sobrescrita

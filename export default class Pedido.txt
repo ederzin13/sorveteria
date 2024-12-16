@@ -1,0 +1,12 @@
+export default class Pedido {
+	private cliente: Client;
+	private quantItens: number;
+	private pagamento: Pagamento;
+	private data: date;
+	private subtotal: number;
+	private total: number;
+}
+
+export default class PedidoEscola extends Pedido {
+	*atributos*
+}

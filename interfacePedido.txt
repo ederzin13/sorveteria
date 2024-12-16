@@ -1,0 +1,10 @@
+interface Pedido {
+    private cliente!: Cliente;
+    private quantItens!: number;
+    private formaPagamento!: Pagamento;
+    private endereco!: Endereco;
+    private data!: Date;
+    private horario!: number;
+    private subTotal!: number;
+    private valorTotal!: number;
+}
