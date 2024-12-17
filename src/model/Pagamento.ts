@@ -1,36 +1,25 @@
+import ErroPagamento from "../exceptions/ErroPagamento";
+
 export default class Pagamento {
     private tipoPagamento!: number;
 
     public constructor(tipoPagamento: number) {
         this.tipoPagamento = tipoPagamento;
-    }
-
-    public getTipo(): number {
-        return this.tipoPagamento;
-    }
-
-    public setTipo(idTipo: number): void {
-        this.tipoPagamento = idTipo;
-    }
-
-    public confereTipo(idTipo: number): number {
-        let tipo: number = idTipo;
-
-        if (tipo == 1 || 2 || 3) {
-            return tipo;
+        if (tipoPagamento == 1 || 2 || 3) {
+            console.log("Tipo de pagamento válido!")
         }
         else {
-            throw new Error("Forma de pagamento inválida");
+            throw new ErroPagamento("Forma de pagamento inválida");
         } 
     }
 
-    public qualTipo(idTipo: number) {
-        //let confere: number = this.confereTipo(idTipo);
-
+    public qualTipo(tipoPagamento: number) {
         try {
-            this.confereTipo(idTipo);
-        } catch (error: any) {
-            console.error("Ocorreu um erro: " + error.message); 
+            if (tipoPagamento == 1 || 2 || 3) {
+                return tipoPagamento;
+            };
+        } catch (erro: any) {
+            console.error("Ocorreu um erro: " + erro.message); 
         } finally {
             console.log("Deu certo");
         }
@@ -55,16 +44,16 @@ export default class Pagamento {
 //     public qualTipo(idTipo: "dinheiro" | "cartão" | "pix") {
 //         idTipo: this.tipoPagamento;
 
-//         switch(idTipo) {
-//             case 1: this.tipoPagamento = idTipo;
-//             break;
+        // switch(idTipo) {
+        //     case 1: this.tipoPagamento = idTipo;
+        //     break;
 
-//             case 2: this.tipoPagamento = idTipo;
-//             break;
+        //     case 2: this.tipoPagamento = idTipo;
+        //     break;
 
-//             case 3: this.tipoPagamento = idTipo;
-//             break;
+        //     case 3: this.tipoPagamento = idTipo;
+        //     break;
 
-//             default: return; 
-//         }
+        //     default: return; 
+        // }
 //     }

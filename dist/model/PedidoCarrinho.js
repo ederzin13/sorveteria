@@ -7,7 +7,7 @@ const Pedido_1 = __importDefault(require("./Pedido"));
 class PedidoCarrinho extends Pedido_1.default {
     constructor() {
         super(...arguments);
-        this.FRETE = 40;
+        this.FRETE = 40; //
     }
     somaFrete() {
         let total = this.getSubTotal() + this.FRETE;
