@@ -10,7 +10,7 @@ import Escola from "./model/Escola";
 import Pessoa from "./model/Pessoa";
 import PedidoCarrinho from "./model/PedidoCarrinho";
 
-let router: Router = new Router();
+//let router: Router = new Router();
 
 // let dataPedido: Date = new Date("2025-01-01");
 // console.log(dataPedido);
@@ -29,19 +29,8 @@ let router: Router = new Router();
 // pedido.setQuant(10);
 // console.log(pedido);
 
-// let pagamento: Pagamento = new Pagamento(1);
-// console.log(pagamento.qualTipo(2));
+let pagamento: Pagamento = new Pagamento(4);
 
-// let carrinho1: Carrinho = new Carrinho();
-// console.log(carrinho1.getQuantos());
 
-// let carrinho2: Carrinho = new Carrinho();
-// console.log(carrinho2.getQuantos());
-
-// let carrinho3: Carrinho = new Carrinho();
-// console.log(carrinho3.getQuantos());
-
-// let carrinho4: Carrinho = new Carrinho();
-// console.log(carrinho4.getQuantos());
 
 

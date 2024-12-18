@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class ErroPagamento {
-    constructor(message = "Pai dos erros", tipo = 1) {
+    constructor(message = "Tipo de pagamento inválido! Escolha entre: 1, 2, 3.") {
         this.message = message;
-        this.tipoPagamento = tipo;
+    }
+    getMessage() {
+        return this.message;
     }
 }
 exports.default = ErroPagamento;

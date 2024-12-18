@@ -7,25 +7,21 @@ const ErroPagamento_1 = __importDefault(require("../exceptions/ErroPagamento"));
 class Pagamento {
     constructor(tipoPagamento) {
         this.tipoPagamento = tipoPagamento;
-        if (tipoPagamento == 1 || 2 || 3) {
-            console.log("Tipo de pagamento válido!");
-        }
-        else {
-            throw new ErroPagamento_1.default("Forma de pagamento inválida");
-        }
+        console.log(this.tipoPagamento);
+        this.qualTipo(tipoPagamento);
     }
     qualTipo(tipoPagamento) {
         try {
-            if (tipoPagamento == 1 || 2 || 3) {
-                return tipoPagamento;
+            if (tipoPagamento == 1 || tipoPagamento == 2 || tipoPagamento == 3) {
+                console.log("Tipo de pagamento válido!");
             }
-            ;
+            else {
+                let erro = new ErroPagamento_1.default();
+                throw erro.getMessage();
+            }
         }
         catch (erro) {
-            console.error("Ocorreu um erro: " + erro.message);
-        }
-        finally {
-            console.log("Deu certo");
+            console.error(`Ocorreu um erro: ${erro}`);
         }
     }
 }
