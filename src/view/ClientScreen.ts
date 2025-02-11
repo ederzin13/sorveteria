@@ -12,8 +12,10 @@ export default class ClientScreen {
 
     public registerClient(): void {
         let cliente: Client = this.router.clientController.getNewPessoa();
+        
         let clientName = this.prompt("Qual o nome do cliente?");
         cliente.setName(clientName);
+        
         this.router.clientController.addNewClient(cliente);
         console.log("Cliente adicionado");
     }

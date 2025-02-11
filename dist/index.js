@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Pagamento_1 = __importDefault(require("./model/Pagamento"));
-//let router: Router = new Router();
+const Router_1 = __importDefault(require("./control/Router"));
+let router = new Router_1.default();
 // let dataPedido: Date = new Date("2025-01-01");
 // console.log(dataPedido);
 // console.log(typeof(dataPedido));
@@ -18,4 +18,9 @@ const Pagamento_1 = __importDefault(require("./model/Pagamento"));
 // pedido.setData(dataPedido);
 // pedido.setQuant(10);
 // console.log(pedido);
-let pagamento = new Pagamento_1.default(4);
+// let pagamento: Pagamento = new Pagamento(4);
+// try {
+//     pagamento.qualTipo(4);
+// } catch (error: any) {
+//     console.log(error);
+// }

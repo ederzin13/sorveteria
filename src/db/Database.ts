@@ -1,6 +1,7 @@
 import Client from "../model/Cliente"
 import Endereco from "../model/Endereco";
 import Escola from "../model/Escola";
+import Pagamento from "../model/Pagamento";
 import Pedido from "../model/Pedido";
 import Picoles from "../model/Picoles";
 
@@ -10,6 +11,8 @@ export default class Database {
     private enderecos: Endereco[] = [];
     private picoles: Picoles[] = [];
     private pedidos: Pedido[] = [];
+    private payment: number[] = [1, 2, 3];
+    //private iceCream
 
     public addClient(cliente: Client): void {
         this.clientes.push(cliente);
@@ -50,5 +53,17 @@ export default class Database {
 
     public listPedidos(): void {
         for (let i = 0; i <= this.pedidos.length; i++) console.log(this.pedidos[i]);
+    }
+
+    //
+
+    public payments(paymentId: number): number {
+        let payId: number = 0;
+
+        for (let i = 0; i <= this.payment.length; i++) {
+            if (i == paymentId) payId = paymentId;
+        }
+
+        return payId;
     }
 }

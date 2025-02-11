@@ -7,7 +7,9 @@ class Database {
         this.enderecos = [];
         this.picoles = [];
         this.pedidos = [];
+        this.payment = [1, 2, 3];
     }
+    //private iceCream
     addClient(cliente) {
         this.clientes.push(cliente);
     }
@@ -43,6 +45,15 @@ class Database {
     listPedidos() {
         for (let i = 0; i <= this.pedidos.length; i++)
             console.log(this.pedidos[i]);
+    }
+    //
+    payments(paymentId) {
+        let payId = 0;
+        for (let i = 0; i <= this.payment.length; i++) {
+            if (i == paymentId)
+                payId = paymentId;
+        }
+        return payId;
     }
 }
 exports.default = Database;

@@ -24,7 +24,7 @@ export default class PrimaryScreen {
 
             switch(choice) {
                 case "1": console.log("CADASTRAR\n-------------\n");
-                let choiceCadastro = this.prompt("O que quer cadastrar?\n 1 - Cliente\n 2 - Escola\n 3 - Sorvetes\n 4 - Sair");
+                let choiceCadastro = this.prompt("O que quer cadastrar?\n 1 - Cliente\n 2 - Escola\n 3 - Sorvetes\n 4 - Pedido\n 5 - Sair");
                 
                 switch(choiceCadastro) {
                     case "1": console.log("registrando cliente\n----------------------\n");
@@ -35,11 +35,13 @@ export default class PrimaryScreen {
                     this.schoolScreen.registerSchool();
                     break;
 
-                    case "3": console.log("Cadastro de sorvetes");
+                    case "3": console.log("Cadastro de sorvetes\n--------------------\n");
                     break;
 
-                    case "4": showScreen = false;
+                    case "4": console.log("Novo pedido\n--------------------\n");
                     break;
+
+                    case "5": showScreen = false;
 
                     default: console.log("Inválido");
                     break;

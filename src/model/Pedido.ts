@@ -4,6 +4,7 @@ import Endereco from "./Endereco";
 
 export default class Pedido {
     private cliente!: Cliente;
+    private items!: number; 
     private quantItens!: number;
     private formaPagamento!: Pagamento;
     private endereco!: Endereco;

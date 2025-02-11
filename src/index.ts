@@ -10,7 +10,7 @@ import Escola from "./model/Escola";
 import Pessoa from "./model/Pessoa";
 import PedidoCarrinho from "./model/PedidoCarrinho";
 
-//let router: Router = new Router();
+let router: Router = new Router();
 
 // let dataPedido: Date = new Date("2025-01-01");
 // console.log(dataPedido);
@@ -29,7 +29,13 @@ import PedidoCarrinho from "./model/PedidoCarrinho";
 // pedido.setQuant(10);
 // console.log(pedido);
 
-let pagamento: Pagamento = new Pagamento(4);
+// let pagamento: Pagamento = new Pagamento(4);
+
+// try {
+//     pagamento.qualTipo(4);
+// } catch (error: any) {
+//     console.log(error);
+// }
 
 
 
