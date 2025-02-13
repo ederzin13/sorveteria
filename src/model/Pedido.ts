@@ -3,6 +3,7 @@ import Pagamento from "./Pagamento";
 import Endereco from "./Endereco";
 
 export default class Pedido {
+    private id!: number;
     private cliente!: Cliente;
     private items!: number; 
     private quantItens!: number;
@@ -17,6 +18,14 @@ export default class Pedido {
         if (this.temDesconto()) {
             this.subTotal = this.subTotal - this.aplicaDesconto();
         }
+    }
+
+    public getId(): number {
+        return this.id;
+    }
+
+    public setId(id: number): void {
+        this.id = id;
     }
 
     public getCliente(): object {

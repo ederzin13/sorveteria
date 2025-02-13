@@ -12,8 +12,9 @@ class SchoolScreen {
     registerSchool() {
         let school = this.router.schoolController.getNewSchool();
         let schoolName = this.prompt("Qual o nome da escola?");
-        let cnpj = this.prompt("Qual o CNPJ?");
         school.setName(schoolName);
+        let cnpj = this.prompt("Qual o CNPJ?");
+        school.setCnpj(parseInt(cnpj));
         this.router.schoolController.addNewSchool(school);
         console.log("Escola adicionada");
     }

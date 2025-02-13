@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Database_1 = __importDefault(require("../db/Database"));
 const PrimaryScreen_1 = __importDefault(require("../view/PrimaryScreen"));
 const ClientController_1 = __importDefault(require("./ClientController"));
+const PedidoController_1 = __importDefault(require("./PedidoController"));
 const SchoolController_1 = __importDefault(require("./SchoolController"));
 class Router {
     constructor() {
@@ -13,6 +14,7 @@ class Router {
         this.db = new Database_1.default();
         this.clientController = new ClientController_1.default(this.db);
         this.schoolController = new SchoolController_1.default(this.db);
+        this.pedidoController = new PedidoController_1.default(this.db);
         this.ps.getFirstScreen();
     }
 }

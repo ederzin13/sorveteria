@@ -59,7 +59,8 @@ export default class PrimaryScreen {
                     case "2": console.log("Consulta de escolas\n---------------------\n");
                     this.router.schoolController.listSchools();
 
-                    case "3": console.log("Consulta de pedidos");
+                    case "3": console.log("Consulta de pedidos\n---------------------\n");
+                    this.router.pedidoController.listPedidos();
                     break;
 
                     case "4": console.log("Consulta da disponibilidade dos carrinhos");
