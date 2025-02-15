@@ -16,18 +16,5 @@ export default class Pagamento {
                 throw new ErroPagamento("Tipo de pagamento inválido");
             }
     }
-
-    // public qualTipo(tipoPagamento: number) {
-    //     try {
-    //         if (tipoPagamento == 1 || tipoPagamento == 2 || tipoPagamento == 3) {
-    //             console.log("Tipo de pagamento válido!");
-    //         } else {
-    //             let erro: ErroPagamento = new ErroPagamento();
-    //             throw erro.getMessage();
-    //         }
-    //     } catch (erro: any) {
-    //         console.error(`Ocorreu um erro: ${erro}`); 
-    //     } 
-    // }
 }
 

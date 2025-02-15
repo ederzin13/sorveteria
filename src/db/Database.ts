@@ -12,7 +12,6 @@ export default class Database {
     private picoles: Picoles[] = [];
     private pedidos: Pedido[] = [];
     private payment: number[] = [1, 2, 3];
-    //private iceCream
 
     public addClient(cliente: Client): void {
         this.clientes.push(cliente);
@@ -39,7 +38,7 @@ export default class Database {
         for (let i = 0; i <= this.clientes.length; i++) console.log(this.clientes[i]); 
     }
 
-    public listAddressess(): void {
+    public listAddresses(): void {
         for (let i = 0; i <= this.enderecos.length; i++) console.log(this.enderecos[i]);
     }
 

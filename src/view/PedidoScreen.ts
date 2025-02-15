@@ -14,14 +14,15 @@ export default class PedidoScreen {
     }
 
     public registerPedido(): void {
-        let pedido: Pedido = this.router.pedidoController.getNewPedido();
+        let newPedido: Pedido = this.router.pedidoController.getNewPedido();
 
         let idPedido: string = this.prompt("Id do pedido");
-        let idConvertido: number = +idPedido;
-        pedido.setId(idConvertido);
+        newPedido.setId(+idPedido);
+        
+        
+    }
 
-        //let cliente: Client = this.router.clientController.getNewPessoa();
-        let cliente: Client;
-        let novoPedido = this.router.pedidoController.addNewPedido(pedido);
+    public isCliente(): void {
+
     }
 }
