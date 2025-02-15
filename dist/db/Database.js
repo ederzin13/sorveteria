@@ -9,7 +9,6 @@ class Database {
         this.pedidos = [];
         this.payment = [1, 2, 3];
     }
-    //private iceCream
     addClient(cliente) {
         this.clientes.push(cliente);
     }
@@ -30,7 +29,7 @@ class Database {
         for (let i = 0; i <= this.clientes.length; i++)
             console.log(this.clientes[i]);
     }
-    listAddressess() {
+    listAddresses() {
         for (let i = 0; i <= this.enderecos.length; i++)
             console.log(this.enderecos[i]);
     }

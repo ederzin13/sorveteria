@@ -6,6 +6,12 @@ class Pedido {
             this.subTotal = this.subTotal - this.aplicaDesconto();
         }
     }
+    getId() {
+        return this.id;
+    }
+    setId(id) {
+        this.id = id;
+    }
     getCliente() {
         return this.cliente;
     }

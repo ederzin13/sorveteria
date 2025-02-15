@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Database_1 = __importDefault(require("../db/Database"));
 const PrimaryScreen_1 = __importDefault(require("../view/PrimaryScreen"));
+const AddressController_1 = __importDefault(require("./AddressController"));
 const ClientController_1 = __importDefault(require("./ClientController"));
 const PedidoController_1 = __importDefault(require("./PedidoController"));
 const SchoolController_1 = __importDefault(require("./SchoolController"));
@@ -15,6 +16,7 @@ class Router {
         this.clientController = new ClientController_1.default(this.db);
         this.schoolController = new SchoolController_1.default(this.db);
         this.pedidoController = new PedidoController_1.default(this.db);
+        this.addressController = new AddressController_1.default(this.db);
         this.ps.getFirstScreen();
     }
 }
