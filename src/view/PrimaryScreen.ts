@@ -3,6 +3,7 @@ import Router from "../control/Router";
 import ClientScreen from "./ClientScreen";
 import SchoolScreen from "./SchoolScreen";
 import AddressScreen from "./AddressScreen";
+import PedidoScreen from "./PedidoScreen";
 
 export default class PrimaryScreen {
     private prompt = PromptSync();
@@ -10,12 +11,14 @@ export default class PrimaryScreen {
     private clientScreen!: ClientScreen;
     private schoolScreen!: SchoolScreen;
     private addressScreen!: AddressScreen;
+    private pedidoScreen!: PedidoScreen;
 
     public constructor(router: Router) {
         this.router = router;
         this.clientScreen = new ClientScreen(this.router);
         this.schoolScreen = new SchoolScreen(this.router);
         this.addressScreen = new AddressScreen(this.router);
+        this.pedidoScreen = new PedidoScreen(this.router);
         //pra cada tela que existir (arquivos "screen"), adicionar uma instância aqui
     }
 
@@ -42,6 +45,7 @@ export default class PrimaryScreen {
                     break;
 
                     case "4": console.log("Novo pedido\n--------------------\n");
+                    this.pedidoScreen.registerPedido();
                     break;
 
                     case "5": console.log("Registrando endereço\n--------------------\n");

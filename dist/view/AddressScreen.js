@@ -12,9 +12,9 @@ class AddressScreen {
     registerAddress() {
         let newAddress = this.router.addressController.getNewAddress();
         let addressRoad = this.prompt("Qual a rua?");
-        newAddress.setRua(addressRoad);
+        newAddress.setRua(addressRoad.toUpperCase());
         let addressNeighbourhood = this.prompt("Qual o bairro?");
-        newAddress.setBairro(addressNeighbourhood);
+        newAddress.setBairro(addressNeighbourhood.toUpperCase());
         let addressNumber = this.prompt("Qual o número?");
         newAddress.setNumero(+addressNumber);
         let addressCep = this.prompt("Qual o CEP?");

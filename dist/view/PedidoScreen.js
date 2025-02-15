@@ -12,13 +12,17 @@ class PedidoScreen {
         this.router = router;
     }
     registerPedido() {
-        let pedido = this.router.pedidoController.getNewPedido();
+        let newPedido = this.router.pedidoController.getNewPedido();
+        this.pedido = newPedido;
         let idPedido = this.prompt("Id do pedido");
-        let idConvertido = +idPedido;
-        pedido.setId(idConvertido);
-        //let cliente: Client = this.router.clientController.getNewPessoa();
-        let cliente;
-        let novoPedido = this.router.pedidoController.addNewPedido(pedido);
+        newPedido.setId(+idPedido);
+        let quantItens = this.prompt("Quantos itens tem o pedido?");
+        newPedido.setQuant(+quantItens);
+        console.log(`O valor do pedido ficou R$${this.calculaTotal()}\n`);
+    }
+    calculaTotal() {
+        let total = (this.pedido.getQuant() * 1.5);
+        return total;
     }
 }
 exports.default = PedidoScreen;

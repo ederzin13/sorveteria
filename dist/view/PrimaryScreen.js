@@ -7,6 +7,7 @@ const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const ClientScreen_1 = __importDefault(require("./ClientScreen"));
 const SchoolScreen_1 = __importDefault(require("./SchoolScreen"));
 const AddressScreen_1 = __importDefault(require("./AddressScreen"));
+const PedidoScreen_1 = __importDefault(require("./PedidoScreen"));
 class PrimaryScreen {
     constructor(router) {
         this.prompt = (0, prompt_sync_1.default)();
@@ -14,6 +15,7 @@ class PrimaryScreen {
         this.clientScreen = new ClientScreen_1.default(this.router);
         this.schoolScreen = new SchoolScreen_1.default(this.router);
         this.addressScreen = new AddressScreen_1.default(this.router);
+        this.pedidoScreen = new PedidoScreen_1.default(this.router);
         //pra cada tela que existir (arquivos "screen"), adicionar uma instância aqui
     }
     getFirstScreen() {
@@ -38,6 +40,7 @@ class PrimaryScreen {
                             break;
                         case "4":
                             console.log("Novo pedido\n--------------------\n");
+                            this.pedidoScreen.registerPedido();
                             break;
                         case "5":
                             console.log("Registrando endereço\n--------------------\n");
@@ -60,6 +63,7 @@ class PrimaryScreen {
                         case "2":
                             console.log("Consulta de escolas\n---------------------\n");
                             this.router.schoolController.listSchools();
+                            break;
                         case "3":
                             console.log("Consulta de pedidos\n---------------------\n");
                             this.router.pedidoController.listPedidos();

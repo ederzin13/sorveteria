@@ -23,7 +23,7 @@ class ClientScreen {
     registerPessoa() {
         let person = this.router.clientController.getNewPessoa();
         let clientName = this.prompt("Qual o nome do cliente?");
-        person.setName(clientName);
+        person.setName(clientName.toUpperCase());
         this.router.clientController.addNewClient(person);
         console.log("Cliente adicionado");
     }

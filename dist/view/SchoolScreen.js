@@ -12,7 +12,7 @@ class SchoolScreen {
     registerSchool() {
         let school = this.router.schoolController.getNewSchool();
         let schoolName = this.prompt("Qual o nome da escola?");
-        school.setName(schoolName);
+        school.setName(schoolName.toUpperCase());
         let schoolPhone = this.prompt("Qual o número de telefone?");
         school.setPhone(+schoolPhone);
         let schoolCnpj = this.prompt("Qual o CNPJ?");
