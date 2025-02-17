@@ -21,7 +21,7 @@ export default class PedidoScreen {
         let idPedido: string = this.prompt("Id do pedido");
         newPedido.setId(+idPedido);
         
-        let quantItens = this.prompt("Quantos itens tem o pedido?");
+        let quantItens: string = this.prompt("Quantos itens tem o pedido?");
         newPedido.setQuant(+quantItens);
 
         console.log(`O valor do pedido ficou R$${this.calculaTotal()}\n`);

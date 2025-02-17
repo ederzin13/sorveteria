@@ -9,6 +9,7 @@ import Pagamento from "./model/Pagamento";
 import Escola from "./model/Escola";
 import Pessoa from "./model/Pessoa";
 import PedidoCarrinho from "./model/PedidoCarrinho";
+import PedidoScreen from "./view/PedidoScreen";
 
 let router: Router = new Router();
 

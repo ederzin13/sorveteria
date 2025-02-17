@@ -1,6 +1,7 @@
 import ISorvete from "./ISorvete";
+import ISorveteGen from "./ISorveteGen";
 
-export default class Picoles implements ISorvete{
+export default class Picoles implements ISorveteGen<string>{
     tipo: "Picolé";
     valor: number = 1.5;
 
