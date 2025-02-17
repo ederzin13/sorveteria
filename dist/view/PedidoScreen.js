@@ -21,7 +21,8 @@ class PedidoScreen {
         console.log(`O valor do pedido ficou R$${this.calculaTotal()}\n`);
     }
     calculaTotal() {
-        let total = (this.pedido.getQuant() * 1.5);
+        let valor = 1.5;
+        let total = (this.pedido.getQuant() * valor);
         return total;
     }
 }

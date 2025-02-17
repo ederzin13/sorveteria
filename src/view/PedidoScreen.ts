@@ -28,7 +28,9 @@ export default class PedidoScreen {
     }
 
     public calculaTotal(): number {
-        let total: number = (this.pedido.getQuant() * 1.5);
+        let valor: number = 1.5;
+
+        let total: number = (this.pedido.getQuant() * valor);
 
         return total;
     }
