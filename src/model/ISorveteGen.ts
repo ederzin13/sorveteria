@@ -1,9 +1,6 @@
-// export default interface ISorvete {
-//     tipo?: "Picolé" | "Paleta" | "Moreninha";
-//     valor: number;
-// }
-
-export default interface ISorveteGen<T> {
+export default interface ISorveteGen<T, U> {
     tipo: T;
+    sabor: string;
+    quantidade: T | U;
     valor: number;
 }
